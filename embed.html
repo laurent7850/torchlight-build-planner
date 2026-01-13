@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assistant - Code Embed</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f8fafc;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #1e293b;
+            margin-bottom: 20px;
+        }
+        .embed-section {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: #f1f5f9;
+            border-radius: 8px;
+            border-left: 4px solid #3b82f6;
+        }
+        .code-block {
+            background: #1e293b;
+            color: #e2e8f0;
+            padding: 20px;
+            border-radius: 8px;
+            font-family: 'Monaco', 'Menlo', monospace;
+            font-size: 14px;
+            overflow-x: auto;
+            margin: 15px 0;
+        }
+        .copy-btn {
+            background: #3b82f6;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+        .copy-btn:hover {
+            background: #2563eb;
+        }
+        .preview {
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+        .option {
+            margin-bottom: 25px;
+        }
+        .option h3 {
+            color: #3b82f6;
+            margin-bottom: 10px;
+        }
+        .warning {
+            background: #fef3c7;
+            border: 1px solid #f59e0b;
+            border-radius: 6px;
+            padding: 12px;
+            margin: 15px 0;
+            color: #92400e;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎵 Assistant - Le labo Nostalgie - Code d'intégration</h1>
+        <p>Voici différentes options pour intégrer l'Assistant dans votre site web :</p>
+
+        <div class="embed-section">
+            <div class="option">
+                <h3>📱 Option 1 : Iframe responsive (Recommandé)</h3>
+                <p>Intégration simple et responsive qui s'adapte à tous les écrans :</p>
+                
+                <div class="code-block" id="iframe-code"><!-- Assistant Chat Integration -->
+&lt;div style="width: 100%; max-width: 800px; margin: 0 auto;"&gt;
+    &lt;iframe 
+        src="https://jocular-tulumba-a97973.netlify.app"
+        width="100%" 
+        height="600"
+        frameborder="0"
+        style="border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);"
+        title="Assistant - Le labo Nostalgie">
+    &lt;/iframe&gt;
+&lt;/div&gt;</div>
+                <button class="copy-btn" onclick="copyCode('iframe-code')">📋 Copier le code</button>
+                
+                <div class="preview">
+                    <iframe 
+                        src="https://jocular-tulumba-a97973.netlify.app"
+                        width="100%" 
+                        height="400"
+                        frameborder="0"
+                        style="border-radius: 8px;"
+                        title="Assistant - Aperçu">
+                    </iframe>
+                </div>
+            </div>
+
+            <div class="option">
+                <h3>💻 Option 2 : Iframe pleine largeur</h3>
+                <p>Pour une intégration sur toute la largeur de votre page :</p>
+                
+                <div class="code-block" id="fullwidth-code"><!-- Assistant Full Width -->
+&lt;iframe 
+    src="https://jocular-tulumba-a97973.netlify.app"
+    width="100%" 
+    height="700"
+    frameborder="0"
+    style="display: block; margin: 20px 0;"
+    title="Assistant - Le labo Nostalgie">
+&lt;/iframe&gt;</div>
+                <button class="copy-btn" onclick="copyCode('fullwidth-code')">📋 Copier le code</button>
+            </div>
+
+            <div class="option">
+                <h3>🎯 Option 3 : Iframe avec dimensions fixes</h3>
+                <p>Pour un contrôle précis des dimensions :</p>
+                
+                <div class="code-block" id="fixed-code"><!-- Assistant Fixed Size -->
+&lt;div style="text-align: center; margin: 20px 0;"&gt;
+    &lt;iframe 
+        src="https://jocular-tulumba-a97973.netlify.app"
+        width="800" 
+        height="600"
+        frameborder="0"
+        style="border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); max-width: 100%;"
+        title="Assistant - Le labo Nostalgie">
+    &lt;/iframe&gt;
+&lt;/div&gt;</div>
+                <button class="copy-btn" onclick="copyCode('fixed-code')">📋 Copier le code</button>
+            </div>
+
+            <div class="option">
+                <h3>🚀 Option 4 : Bouton d'ouverture en popup</h3>
+                <p>Ouvre DJ Lyric dans une nouvelle fenêtre :</p>
+                
+                <div class="code-block" id="popup-code"><!-- Assistant Popup Button -->
+&lt;button 
+    onclick="window.open('https://jocular-tulumba-a97973.netlify.app', 'assistant', 'width=800,height=700,scrollbars=yes,resizable=yes')"
+    style="
+        background: linear-gradient(135deg, #d97706, #b45309);
+        color: white;
+        border: none;
+        padding: 12px 24px;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        transition: all 0.2s;
+    "
+    onmouseover="this.style.transform='translateY(-2px)'"
+    onmouseout="this.style.transform='translateY(0)'"&gt;
+    🎵 Ouvrir l'Assistant
+</button>" style="background: #facc5e;"></div>
+                <button class="copy-btn" onclick="copyCode('popup-code')">📋 Copier le code</button>
+                
+                <div style="margin: 15px 0;">
+                    <button 
+                        onclick="window.open('https://jocular-tulumba-a97973.netlify.app', 'assistant', 'width=800,height=700,scrollbars=yes,resizable=yes')"
+                        style="
+                            background: #facc5e;
+                            color: white;
+                            border: none;
+                            padding: 12px 24px;
+                            border-radius: 8px;
+                            font-size: 16px;
+                            font-weight: 600;
+                            cursor: pointer;
+                            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+                        ">
+                        🎵 Tester le bouton popup
+                    </button>
+                </div>
+            </div>
+
+            <div class="option">
+                <h3>📱 Option 5 : Responsive avec hauteur adaptative</h3>
+                <p>S'adapte automatiquement à la taille de l'écran :</p>
+                
+                <div class="code-block" id="responsive-code"><!-- Assistant Responsive -->
+&lt;div style="
+    width: 100%; 
+    max-width: 1000px; 
+    margin: 20px auto; 
+    padding: 0 15px;
+    box-sizing: border-box;
+"&gt;
+    &lt;iframe 
+        src="https://jocular-tulumba-a97973.netlify.app"
+        width="100%" 
+        height="80vh"
+        frameborder="0"
+        style="
+            border-radius: 12px; 
+            box-shadow: 0 8px 25px -5px rgba(0, 0, 0, 0.1);
+            min-height: 500px;
+            max-height: 800px;
+        "
+        title="Assistant - Le labo Nostalgie">
+    &lt;/iframe&gt;
+&lt;/div&gt;</div>
+                <button class="copy-btn" onclick="copyCode('responsive-code')">📋 Copier le code</button>
+            </div>
+        </div>
+
+        <div class="warning">
+            <strong>💡 Conseils d'intégration :</strong>
+            <ul>
+                <li>L'<strong>Option 1</strong> est recommandée pour la plupart des sites</li>
+                <li>Testez sur mobile et desktop avant la mise en ligne</li>
+                <li>Vous pouvez ajuster les dimensions selon vos besoins</li>
+                <li>L'application est déjà optimisée pour tous les écrans</li>
+            </ul>
+        </div>
+
+        <div style="margin-top: 30px; padding: 20px; background: #f0f9ff; border-radius: 8px; border-left: 4px solid #0ea5e9;">
+            <h3 style="color: #92400e; margin-top: 0;">🔗 URL directe</h3>
+            <p>Vous pouvez aussi partager directement le lien :</p>
+            <div class="code-block" id="direct-url">https://jocular-tulumba-a97973.netlify.app</div>
+            <button class="copy-btn" onclick="copyCode('direct-url')">📋 Copier l'URL</button>
+        </div>
+    </div>
+
+    <script>
+        function copyCode(elementId) {
+            const element = document.getElementById(elementId);
+            const text = element.textContent || element.innerText;
+            
+            navigator.clipboard.writeText(text).then(function() {
+                const btn = event.target;
+                const originalText = btn.textContent;
+                btn.textContent = '✅ Copié !';
+                btn.style.background = '#10b981';
+                
+                setTimeout(function() {
+                    btn.textContent = originalText;
+                    btn.style.background = '#3b82f6';
+                }, 2000);
+            }).catch(function(err) {
+                console.error('Erreur de copie: ', err);
+                alert('Code copié dans le presse-papier !');
+            });
+        }
+    </script>
+</body>
+</html>
